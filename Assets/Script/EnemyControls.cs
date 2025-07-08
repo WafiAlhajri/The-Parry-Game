@@ -11,7 +11,7 @@ public class EnemyControls : MonoBehaviour
     void Start()
     {
         SR = GetComponent<SpriteRenderer>();
-        Idle();
+        Idle(2f);
     }
     void Update()
     {
@@ -20,24 +20,15 @@ public class EnemyControls : MonoBehaviour
 
         }
     }
-    string mode;
-    void switcher()
+    void nextAttackStarter()
     {
         StopAllCoroutines();
-        if (mode == "attack")
-        {
-            StartCoroutine(NextAttack());
-        }
-        else if (mode == "idle")
-        {
-            Idle();
-        }
+        StartCoroutine(NextAttack());
     }
-    public void Idle()
+    public void Idle(float time)
     {
         StartCoroutine(IdleAnimation());
-        mode = "attack";
-        Invoke(nameof(switcher), 2f);
+        Invoke(nameof(nextAttackStarter), time);
     }
     IEnumerator IdleAnimation()
     {
@@ -54,21 +45,48 @@ public class EnemyControls : MonoBehaviour
 
     public IEnumerator NextAttack()
     {
-        yield return new WaitForSeconds(moveset.Moves[counter].TimeTillNextAttack);
-        // check each attack in moveset
+        // check each string in moveset
         foreach (var attack in moveset.Moves[counter].Moves)
         {
-            // check each frame in attack
+            // check each attack in string
             if (attack.movetype == Moveset.Type.Normal)
             {
-                foreach (var frames in moveset.ML.NormalAttacks[attack.AttackNumber].AttackFrames)
+                //for mixups
+                if (attack.Mixup)
                 {
-                    SR.sprite = frames.AttackSprite;
-                    if (frames.Parryable)
+                    SR.sprite = moveset.ML.NormalAttacks[attack.AttackNumber].AttackFrames[0].AttackSprite;
+                    yield return new WaitForSeconds(attack.AttackTime / 2);
+                    int temprange = Random.Range(0, moveset.ML.NormalAttacks.Count);
+                    foreach (var frames in moveset.ML.NormalAttacks[temprange].AttackFrames)
                     {
-                        Parry(frames.AttackLocation, attack.ParryWindow);
+                        SR.sprite = frames.AttackSprite;
+                        if (frames.Parryable)
+                        {
+                            Parry(frames.AttackLocation, attack.ParryWindow);
+                            yield return new WaitForSeconds(attack.ParryWindow);
+                        }
+                        else
+                        {
+                            yield return new WaitForSeconds(attack.AttackTime);
+                        }
                     }
-                    yield return new WaitForSeconds(attack.AttackTime);
+                }
+                //no mixups
+                else
+                {
+                    foreach (var frames in moveset.ML.NormalAttacks[attack.AttackNumber].AttackFrames)
+                    {
+                        SR.sprite = frames.AttackSprite;
+                        if (frames.Parryable)
+                        {
+                            Parry(frames.AttackLocation, attack.ParryWindow);
+                            yield return new WaitForSeconds(attack.ParryWindow);
+                        }
+                        else
+                        {
+                            yield return new WaitForSeconds(attack.AttackTime);
+                        }
+                    }
                 }
             }
 
@@ -102,8 +120,7 @@ public class EnemyControls : MonoBehaviour
         if (counter >= moveset.Moves.Count) EndFight();
         else
         {
-            mode = "idle";
-            Invoke(nameof(switcher), 1f);
+            Idle(moveset.Moves[counter].TimeTillNextAttack);
         }
     }
 

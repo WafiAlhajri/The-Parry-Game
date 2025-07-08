@@ -30,5 +30,7 @@ public class Moveset : ScriptableObject
         [Header("Library reference")]
         public Type movetype;
         public int AttackNumber;
+        [Header("Normal Attack Options")]
+        public bool Mixup;
     }
 }

@@ -5,10 +5,6 @@ public class ParryPoint : MonoBehaviour
     int points;
     float time;
     bool parried = false;
-    public void Update()
-    {
-        if (parried) Destroy(gameObject);
-    }
     public void setParry(int getPoints, float getTime)
     {
         points = getPoints;
@@ -17,11 +13,14 @@ public class ParryPoint : MonoBehaviour
     }
     void OnDestroy()
     {
-        if (parried) GameManager.GM.setPoints(points);
-        else if (!parried) GameManager.GM.lowerHP();
+        if (!parried) GameManager.GM.lowerHP();
     }
     void OnTriggerEnter2D(Collider2D collision)
     {
-        parried = true;
+        if (!parried)
+        {
+            GameManager.GM.setPoints(points);
+            parried = true;
+        }
     }
 }

@@ -17,10 +17,11 @@ MonoBehaviour:
   - movename: first attack
     Moves:
     - MoveName: overhead
-      AttackTime: 0.5
-      ParryWindow: 0.5
+      AttackTime: 1
+      ParryWindow: 1
       movetype: 0
       AttackNumber: 1
+      Mixup: 1
     TimeTillNextAttack: 1
   - movename: second attack
     Moves:
@@ -29,6 +30,7 @@ MonoBehaviour:
       ParryWindow: 1
       movetype: 0
       AttackNumber: 0
+      Mixup: 0
     TimeTillNextAttack: 1
   - movename: third attack
     Moves:
@@ -37,14 +39,17 @@ MonoBehaviour:
       ParryWindow: 1
       movetype: 0
       AttackNumber: 0
+      Mixup: 0
     - MoveName: side
       AttackTime: 1
       ParryWindow: 1
       movetype: 0
       AttackNumber: 0
+      Mixup: 0
     - MoveName: overhead
       AttackTime: 1
       ParryWindow: 1
       movetype: 0
       AttackNumber: 1
+      Mixup: 0
     TimeTillNextAttack: 1
