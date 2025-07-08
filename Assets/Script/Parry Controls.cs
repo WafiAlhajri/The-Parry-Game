@@ -1,7 +1,5 @@
-
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.UIElements;
 
 public class ParryControls : MonoBehaviour
 {
@@ -9,13 +7,13 @@ public class ParryControls : MonoBehaviour
     public Camera MC;
     Vector2 rotationinput;
     PlayerInput PI;
+    public GameObject ParryCollider;
+    bool canParry = true;
     void Start()
     {
         PI = GetComponent<PlayerInput>();
         RB2D = GetComponent<Rigidbody2D>();
     }
-
-    // Update is called once per frame
     void Update()
     {
         if (PI.currentControlScheme == "Keyboard&Mouse")
@@ -41,5 +39,23 @@ public class ParryControls : MonoBehaviour
         {
             rotationinput = context.ReadValue<Vector2>();
         }
+    }
+    public void OnParry()
+    {
+        if (canParry)
+        {
+            ParryCollider.SetActive(true);
+            Invoke(nameof(StopParry), 0.1f);
+            Invoke(nameof(ResetParry), 1f);
+            canParry = false;
+        }
+    }
+    void StopParry()
+    {
+        ParryCollider.SetActive(false);
+    }
+    void ResetParry()
+    {
+        canParry = true;
     }
 }

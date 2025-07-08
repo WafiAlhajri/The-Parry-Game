@@ -1,0 +1,62 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f2d89cf957a2b54eb2da8b06b24ad46, type: 3}
+  m_Name: Moves
+  m_EditorClassIdentifier: 
+  IdleFrames:
+  - FrameName: 1
+    FrameSprite: {fileID: 720765414803502515, guid: 73d53910deb21014ca0d623afc8882b0, type: 3}
+  - FrameName: 2
+    FrameSprite: {fileID: -2633819227039871696, guid: bb03482f3b30e1541be9d183ec99bf3c, type: 3}
+  - FrameName: 3
+    FrameSprite: {fileID: -6826560892229287143, guid: 1648631a2e4da314cb240bd652458f01, type: 3}
+  - FrameName: 4
+    FrameSprite: {fileID: -6663914892115786869, guid: 99bc88a3058c2ef49bc79fcd1497527d, type: 3}
+  - FrameName: 5
+    FrameSprite: {fileID: -501785882627996170, guid: 504ac2c111c561945b1b44629c5d1b1f, type: 3}
+  - FrameName: 6
+    FrameSprite: {fileID: -5026699475734462520, guid: abf5270ace062d34e97750833ccfb540, type: 3}
+  - FrameName: 7
+    FrameSprite: {fileID: -4377006677046043543, guid: ff0dd9219a1f4024699f44a950bd986e, type: 3}
+  - FrameName: 8
+    FrameSprite: {fileID: -8812958416513716746, guid: 7204f38b49221ff4e90578c2136d3512, type: 3}
+  NormalAttacks:
+  - AttackName: Side Swipe
+    AttackFrames:
+    - AttackFrame: Ready
+      AttackSprite: {fileID: 7100656080504675184, guid: c2d6beaa9db52804ea09fa47ddd62d2d, type: 3}
+      Parryable: 0
+      AttackLocation: {x: 0, y: 0, z: 0}
+    - AttackFrame: Attack
+      AttackSprite: {fileID: 305152875105435759, guid: ce6e39d1b281a6c4bb6d3fe55f1931fb, type: 3}
+      Parryable: 1
+      AttackLocation: {x: -4.95, y: 1.11, z: 0}
+    - AttackFrame: End
+      AttackSprite: {fileID: 3672001952149735313, guid: 4d7c8e3f8d7b53144bab1e19320cdcb7, type: 3}
+      Parryable: 0
+      AttackLocation: {x: 0, y: 0, z: 0}
+  - AttackName: overhead slash
+    AttackFrames:
+    - AttackFrame: Ready
+      AttackSprite: {fileID: 7100656080504675184, guid: 55e6774f64c89ab4381e0d312994c8fb, type: 3}
+      Parryable: 0
+      AttackLocation: {x: 0, y: 0, z: 0}
+    - AttackFrame: Attack
+      AttackSprite: {fileID: 7100656080504675184, guid: e2b084873896a504699bc5139a2418ea, type: 3}
+      Parryable: 1
+      AttackLocation: {x: 1, y: 1.37, z: 0}
+    - AttackFrame: End
+      AttackSprite: {fileID: 7100656080504675184, guid: fd3183d43a9356b49a803aab882e441d, type: 3}
+      Parryable: 0
+      AttackLocation: {x: 0, y: 0, z: 0}
+  SpecialAttacks: []
+  UltimateAttacks: []
