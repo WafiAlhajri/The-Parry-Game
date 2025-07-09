@@ -58,5 +58,27 @@ MonoBehaviour:
       AttackSprite: {fileID: 7100656080504675184, guid: fd3183d43a9356b49a803aab882e441d, type: 3}
       Parryable: 0
       AttackLocation: {x: 0, y: 0, z: 0}
-  SpecialAttacks: []
+  SpecialAttacks:
+  - AttackName: Shield Bash
+    AttackFrames:
+    - AttackFrame: Start
+      AttackSprite: {fileID: 7100656080504675184, guid: e2be900af5b709241948fb22f9fcebf9, type: 3}
+      Parryable: 0
+      AttackLocation: {x: 0, y: 0, z: 0}
+    - AttackFrame: Beginning
+      AttackSprite: {fileID: 7100656080504675184, guid: ff3af8d96ebc83a4f9ad31c7e868d300, type: 3}
+      Parryable: 0
+      AttackLocation: {x: 0, y: 0, z: 0}
+    - AttackFrame: Attack
+      AttackSprite: {fileID: 7100656080504675184, guid: 3f04db3edf43d284eba2ab654697f40e, type: 3}
+      Parryable: 1
+      AttackLocation: {x: 0.9917183, y: -0.35980564, z: 0}
+    - AttackFrame: Attack
+      AttackSprite: {fileID: 7100656080504675184, guid: 01facb66ff7b171408e86481a7fe74ce, type: 3}
+      Parryable: 0
+      AttackLocation: {x: 0, y: 0, z: 0}
+    - AttackFrame: Attack
+      AttackSprite: {fileID: 7100656080504675184, guid: dd045ba63b93b5441b5a77d8c0fffa75, type: 3}
+      Parryable: 0
+      AttackLocation: {x: 0, y: 0, z: 0}
   UltimateAttacks: []

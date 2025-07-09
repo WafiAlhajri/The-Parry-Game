@@ -19,6 +19,7 @@ public class ParryPoint : MonoBehaviour
     {
         if (!parried)
         {
+            AudioManager.AM.Play("Parry");
             GameManager.GM.setPoints(points);
             parried = true;
         }

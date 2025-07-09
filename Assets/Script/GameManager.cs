@@ -37,16 +37,22 @@ public class GameManager : MonoBehaviour
         HPReferences[hp].SetActive(false);
         if (hp <= 0) EndScreen(false);
     }
+    bool ended = false;
     public void EndScreen(bool Winlose)
     {
-        Endscreen.SetActive(true);
-        if (Winlose)
+        if (!ended)
         {
-            EndscreenText.text = "YOU WON!!!";
+            Endscreen.SetActive(true);
+            if (Winlose)
+            {
+                EndscreenText.text = "YOU WON!!!";
+            }
+            else
+            {
+                EndscreenText.text = "YOU LOST";
+            }
+            ended = true;
         }
-        else
-        {
-            EndscreenText.text = "YOU LOST";
-        }
+
     }
 }

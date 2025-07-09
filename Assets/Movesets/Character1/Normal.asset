@@ -1,0 +1,109 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 377ba1b62fb13794b89ff860390324e3, type: 3}
+  m_Name: Normal
+  m_EditorClassIdentifier: 
+  ML: {fileID: 11400000, guid: 5ac469acf47292944aed96f61b9b94ac, type: 2}
+  Moves:
+  - movename: first attack
+    Moves:
+    - MoveName: overhead
+      AttackTime: 1
+      ParryWindow: 1
+      movetype: 0
+      AttackNumber: 1
+      Mixup: 0
+    TimeTillNextAttack: 2
+  - movename: second attack
+    Moves:
+    - MoveName: side
+      AttackTime: 1
+      ParryWindow: 1
+      movetype: 0
+      AttackNumber: 0
+      Mixup: 0
+    TimeTillNextAttack: 2
+  - movename: third attack
+    Moves:
+    - MoveName: side
+      AttackTime: 0.7
+      ParryWindow: 1
+      movetype: 0
+      AttackNumber: 0
+      Mixup: 0
+    - MoveName: side
+      AttackTime: 0.7
+      ParryWindow: 1
+      movetype: 0
+      AttackNumber: 0
+      Mixup: 0
+    - MoveName: overhead
+      AttackTime: 0.7
+      ParryWindow: 1
+      movetype: 0
+      AttackNumber: 1
+      Mixup: 0
+    TimeTillNextAttack: 1
+  - movename: fourth
+    Moves:
+    - MoveName: over
+      AttackTime: 0.7
+      ParryWindow: 1
+      movetype: 0
+      AttackNumber: 1
+      Mixup: 0
+    - MoveName: ShieldSlam
+      AttackTime: 0.7
+      ParryWindow: 1.4
+      movetype: 1
+      AttackNumber: 0
+      Mixup: 0
+    TimeTillNextAttack: 1
+  - movename: fifth
+    Moves:
+    - MoveName: mixup
+      AttackTime: 0.5
+      ParryWindow: 0.5
+      movetype: 0
+      AttackNumber: 1
+      Mixup: 1
+    - MoveName: mixup
+      AttackTime: 0.5
+      ParryWindow: 0.5
+      movetype: 0
+      AttackNumber: 1
+      Mixup: 1
+    - MoveName: mixup
+      AttackTime: 0.5
+      ParryWindow: 0.5
+      movetype: 0
+      AttackNumber: 1
+      Mixup: 1
+    - MoveName: mixup
+      AttackTime: 0.5
+      ParryWindow: 0.5
+      movetype: 0
+      AttackNumber: 1
+      Mixup: 1
+    - MoveName: shield
+      AttackTime: 0.4
+      ParryWindow: 0.8
+      movetype: 1
+      AttackNumber: 0
+      Mixup: 0
+    - MoveName: over
+      AttackTime: 0.5
+      ParryWindow: 0.5
+      movetype: 0
+      AttackNumber: 1
+      Mixup: 0
+    TimeTillNextAttack: 1

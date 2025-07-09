@@ -5,6 +5,21 @@ TextureImporter:
   - first:
       213: 5342613778061414680
     second: Ui-10_0
+  - first:
+      213: -4751573546537939987
+    second: Ui-10_1
+  - first:
+      213: 4777698067974428290
+    second: Ui-10_2
+  - first:
+      213: -6624965116999564483
+    second: Ui-10_3
+  - first:
+      213: -6801985999204530378
+    second: Ui-10_4
+  - first:
+      213: 5195700168852505802
+    second: Ui-10_5
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -116,10 +131,10 @@ TextureImporter:
       name: Ui-10_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1920
-        height: 1080
+        x: 197
+        y: 715
+        width: 75
+        height: 82
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -130,6 +145,116 @@ TextureImporter:
       bones: []
       spriteID: 811557dbce6c42a40800000000000000
       internalID: 5342613778061414680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ui-10_1
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 720
+        width: 46
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: deb867ac8050f0eb0800000000000000
+      internalID: -4751573546537939987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ui-10_2
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 708
+        width: 47
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2869fa9541bcd4240800000000000000
+      internalID: 4777698067974428290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ui-10_3
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 710
+        width: 94
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3303ef93556f04a0800000000000000
+      internalID: -6624965116999564483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ui-10_4
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 702
+        width: 48
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 637cb3ea5cd7a91a0800000000000000
+      internalID: -6801985999204530378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ui-10_5
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 65
+        width: 313
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac404eb86c5da1840800000000000000
+      internalID: 5195700168852505802
       vertices: []
       indices: 
       edges: []
@@ -149,6 +274,11 @@ TextureImporter:
       entries: []
     nameFileIdTable:
       Ui-10_0: 5342613778061414680
+      Ui-10_1: -4751573546537939987
+      Ui-10_2: 4777698067974428290
+      Ui-10_3: -6624965116999564483
+      Ui-10_4: -6801985999204530378
+      Ui-10_5: 5195700168852505802
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

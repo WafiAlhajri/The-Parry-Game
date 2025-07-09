@@ -116,10 +116,10 @@ TextureImporter:
       name: Ui-8_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1920
-        height: 1080
+        x: 123
+        y: 95
+        width: 456
+        height: 750
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

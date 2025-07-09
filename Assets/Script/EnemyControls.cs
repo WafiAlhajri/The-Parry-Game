@@ -12,6 +12,7 @@ public class EnemyControls : MonoBehaviour
     {
         SR = GetComponent<SpriteRenderer>();
         Idle(2f);
+        AudioManager.AM.Play("Music");
     }
     void Update()
     {
@@ -62,6 +63,7 @@ public class EnemyControls : MonoBehaviour
                         SR.sprite = frames.AttackSprite;
                         if (frames.Parryable)
                         {
+                            AudioManager.AM.Play("Strike");
                             Parry(frames.AttackLocation, attack.ParryWindow);
                             yield return new WaitForSeconds(attack.ParryWindow);
                         }
@@ -79,6 +81,7 @@ public class EnemyControls : MonoBehaviour
                         SR.sprite = frames.AttackSprite;
                         if (frames.Parryable)
                         {
+                            AudioManager.AM.Play("Strike");
                             Parry(frames.AttackLocation, attack.ParryWindow);
                             yield return new WaitForSeconds(attack.ParryWindow);
                         }
@@ -97,6 +100,7 @@ public class EnemyControls : MonoBehaviour
                     SR.sprite = frames.AttackSprite;
                     if (frames.Parryable)
                     {
+                        AudioManager.AM.Play("Strike");
                         Parry(frames.AttackLocation, attack.ParryWindow);
                     }
                     yield return new WaitForSeconds(attack.AttackTime);
@@ -110,6 +114,7 @@ public class EnemyControls : MonoBehaviour
                     SR.sprite = frames.AttackSprite;
                     if (frames.Parryable)
                     {
+                        AudioManager.AM.Play("Strike");
                         Parry(frames.AttackLocation, attack.ParryWindow);
                     }
                     yield return new WaitForSeconds(attack.AttackTime);
@@ -132,6 +137,7 @@ public class EnemyControls : MonoBehaviour
     }
     public void EndFight()
     {
+        AudioManager.AM.Stop("Music");
         StopAllCoroutines();
         GameManager.GM.EndScreen(true);
         Debug.Log("done");
