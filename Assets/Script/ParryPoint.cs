@@ -14,6 +14,7 @@ public class ParryPoint : MonoBehaviour
     void OnDestroy()
     {
         if (!parried) GameManager.GM.lowerHP();
+        else GameManager.GM.ParryAGAIN();
     }
     void OnTriggerEnter2D(Collider2D collision)
     {

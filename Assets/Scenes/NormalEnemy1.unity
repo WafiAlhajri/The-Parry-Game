@@ -474,6 +474,7 @@ MonoBehaviour:
   RB2D: {fileID: 0}
   MC: {fileID: 519420031}
   ParryCollider: {fileID: 273805501}
+  canParry: 1
 --- !u!50 &278877306
 Rigidbody2D:
   serializedVersion: 5
@@ -2096,6 +2097,7 @@ MonoBehaviour:
   - {fileID: 1266247873}
   Endscreen: {fileID: 807764582}
   EndscreenText: {fileID: 1760433479}
+  PC: {fileID: 278877305}
 --- !u!4 &1455921979
 Transform:
   m_ObjectHideFlags: 0

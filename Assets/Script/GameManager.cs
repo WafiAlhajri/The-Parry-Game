@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     public GameObject Endscreen;
     public TextMeshProUGUI EndscreenText;
     public static GameManager GM;
+    public ParryControls PC;
     void Awake()
     {
         if (GM == null)
@@ -25,6 +26,10 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+    public void ParryAGAIN()
+    {
+        PC.ResetParry();
     }
     public void setPoints(int getPoints)
     {

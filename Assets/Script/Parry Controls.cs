@@ -8,7 +8,7 @@ public class ParryControls : MonoBehaviour
     Vector2 rotationinput;
     PlayerInput PI;
     public GameObject ParryCollider;
-    bool canParry = true;
+    [SerializeField] bool canParry = true;
     void Start()
     {
         PI = GetComponent<PlayerInput>();
@@ -44,18 +44,20 @@ public class ParryControls : MonoBehaviour
     {
         if (canParry)
         {
+            canParry = false;
             ParryCollider.SetActive(true);
             Invoke(nameof(StopParry), 0.1f);
             Invoke(nameof(ResetParry), 1f);
-            canParry = false;
         }
     }
     void StopParry()
     {
         ParryCollider.SetActive(false);
     }
-    void ResetParry()
+    public void ResetParry()
     {
+        ParryCollider.SetActive(false);
         canParry = true;
+        CancelInvoke();
     }
 }
